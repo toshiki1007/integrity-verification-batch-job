@@ -21,18 +21,15 @@ cursor = connection.cursor()
 
 date = str('{0:%Y%m%d}'.format(datetime.datetime.now()))
 
-def check_balance(wallet_id, master_balance, total_amount):
+def check_balance(wallet_id, master_balance, total_amount, return_code):
 	if(wallet[2] == total_amount):
-		logger.info("consistency success")
-		logger.info("wallet_id=" + str(wallet_id))
-		logger.info("master_balance=" + str(master_balance))
-		logger.info("total_amount=" + str(total_amount))
+		logger.info("consistency success - wallet_id=" + str(wallet_id))
 	else:
-		logger.error("consistency error")
-		logger.error("wallet_id=" + str(wallet_id))
-		logger.error("master_balance=" + str(master_balance))
-		logger.error("total_amount=" + str(total_amount))
-
+		return_code = 8
+		logger.error("consistency error - wallet_id=" + str(wallet_id) + \
+			", master_balance=" + str(master_balance) + \
+			", total_amount=" + str(total_amount))
+	return return_code
 
 if __name__ == "__main__" :
 	prog_name = os.path.splitext(os.path.basename(__file__))[0]
@@ -81,6 +78,8 @@ if __name__ == "__main__" :
 			writer = csv.writer(f, lineterminator="\n")
 			writer.writerows(transaction_list)
 
+		return_code = 0
+
 		wallet_index = 0
 		wallet_len = len(wallet_list)
 		transaction_index = 0
@@ -97,17 +96,18 @@ if __name__ == "__main__" :
 				total_amount += transaction[2]
 				transaction_index += 1
 				if(transaction_index == transaction_len):
-					check_balance(wallet[0], wallet[2], total_amount)
+					return_code = check_balance(wallet[0], wallet[2], total_amount, return_code)
 					break
 			elif(wallet[0] <  transaction[6]):
-				check_balance(wallet[0], wallet[2], total_amount)
+				return_code = check_balance(wallet[0], wallet[2], total_amount, return_code)
 				total_amount = 0
 				wallet_index += 1
 			else:
 				break
 
 		# オプション取得
-		logger.info("job end - program : " + prog_name)
+		logger.info("job end - program : " + prog_name + ", RC = " + str(return_code))
+
 	except Exception as e:
 		# キャッチして例外をログに記録
 		logger.exception(e)
