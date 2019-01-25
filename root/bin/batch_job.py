@@ -6,6 +6,12 @@ import configparser
 import logging
 import csv
 import datetime
+from aws_xray_sdk.core import xray_recorder
+
+plugins = ('EC2Plugin', 'ECSPlugin')
+xray_recorder.configure(plugins=plugins)
+xray_recorder.configure(sampling=False)
+logging.getLogger('aws_xray_sdk').setLevel(logging.WARNING)
 
 root = os.path.abspath(os.path.join( os.path.dirname(os.path.abspath(__file__)) , ".." ))
 sys.path.append(os.path.join(root,"lib"))
@@ -32,6 +38,7 @@ def check_balance(wallet_id, master_balance, total_amount, return_code):
 	return return_code
 
 if __name__ == "__main__" :
+	xray_recorder.begin_segment('integrity_verification_batch_job')
 	prog_name = os.path.splitext(os.path.basename(__file__))[0]
 
 	usage = "usage: %prog (Argument-1) [options]"
@@ -105,9 +112,8 @@ if __name__ == "__main__" :
 			else:
 				break
 
-		# オプション取得
 		logger.info("job end - program : " + prog_name + ", RC = " + str(return_code))
-
+		xray_recorder.end_segment()
 	except Exception as e:
 		# キャッチして例外をログに記録
 		logger.exception(e)

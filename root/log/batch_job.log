@@ -391,3 +391,44 @@ TypeError: check_balance() missing 1 required positional argument: 'return_code'
 2019-01-25 02:45:56,754 [    INFO] consistency success - wallet_id=1
 2019-01-25 02:45:56,754 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
 2019-01-25 02:45:56,754 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:22:19,786 [    INFO] job start - program : batch_job
+2019-01-25 04:22:19,790 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:22:19,790 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:22:19,791 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:23:59,152 [    INFO] job start - program : batch_job
+2019-01-25 04:23:59,154 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:23:59,154 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:23:59,154 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:23:59,199 [   ERROR] Encountered an issue while polling sampling rules.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/aws_xray_sdk/core/sampling/rule_poller.py", line 46, in _refresh_cache
+    new_rules = self._connector.fetch_sampling_rules()
+  File "/usr/local/lib/python3.6/site-packages/aws_xray_sdk/core/sampling/connector.py", line 42, in wrapper
+    result = func(self, *args, **kargs)
+  File "/usr/local/lib/python3.6/site-packages/aws_xray_sdk/core/sampling/connector.py", line 56, in fetch_sampling_rules
+    resp = self._xray_client.get_sampling_rules()
+  File "/usr/local/lib/python3.6/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.6/site-packages/botocore/client.py", line 661, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (MissingAuthenticationTokenException) when calling the GetSamplingRules operation: Missing Authentication Token
+2019-01-25 04:26:13,072 [    INFO] job start - program : batch_job
+2019-01-25 04:26:13,075 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:26:13,075 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:26:13,075 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:27:49,758 [    INFO] job start - program : batch_job
+2019-01-25 04:27:49,761 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:27:49,762 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:27:49,763 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:28:17,015 [    INFO] job start - program : batch_job
+2019-01-25 04:28:17,019 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:28:17,019 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:28:17,020 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:28:51,068 [    INFO] job start - program : batch_job
+2019-01-25 04:28:51,078 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:28:51,078 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:28:51,078 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 04:55:08,402 [    INFO] job start - program : batch_job
+2019-01-25 04:55:08,410 [    INFO] consistency success - wallet_id=1
+2019-01-25 04:55:08,410 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 04:55:08,410 [    INFO] job end - program : batch_job, RC = 8
