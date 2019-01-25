@@ -71,7 +71,7 @@ if __name__ == "__main__" :
 		for wallet in cursor:
 			wallet_list.append(list(wallet))
 
-		with open("../file/wallet_list_" + date + ".csv", "w", encoding="Shift_jis") as f:
+		with open("../file/wallet_list.csv", "w", encoding="Shift_jis") as f:
 			writer = csv.writer(f, lineterminator="\n")
 			writer.writerows(wallet_list)
 
@@ -81,7 +81,7 @@ if __name__ == "__main__" :
 		for transaction in cursor:
 			transaction_list.append(list(transaction))
 
-		with open("../file/transaction_list" + date + ".csv", "w", encoding="Shift_jis") as f:
+		with open("../file/transaction_list.csv", "w", encoding="Shift_jis") as f:
 			writer = csv.writer(f, lineterminator="\n")
 			writer.writerows(transaction_list)
 
