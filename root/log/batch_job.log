@@ -432,3 +432,7 @@ botocore.exceptions.ClientError: An error occurred (MissingAuthenticationTokenEx
 2019-01-25 04:55:08,410 [    INFO] consistency success - wallet_id=1
 2019-01-25 04:55:08,410 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
 2019-01-25 04:55:08,410 [    INFO] job end - program : batch_job, RC = 8
+2019-01-25 07:20:11,011 [    INFO] job start - program : batch_job
+2019-01-25 07:20:11,014 [    INFO] consistency success - wallet_id=1
+2019-01-25 07:20:11,014 [   ERROR] consistency error - wallet_id=2, master_balance=502550, total_amount=502500
+2019-01-25 07:20:11,015 [    INFO] job end - program : batch_job, RC = 8

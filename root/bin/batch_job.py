@@ -71,9 +71,9 @@ if __name__ == "__main__" :
 		for wallet in cursor:
 			wallet_list.append(list(wallet))
 
-		with open("../file/wallet_list_" + date + ".csv", "w", encoding="Shift_jis") as f:
-			writer = csv.writer(f, lineterminator="\n")
-			writer.writerows(wallet_list)
+#		with open("../file/wallet_list_" + date + ".csv", "w", encoding="Shift_jis") as f:
+#			writer = csv.writer(f, lineterminator="\n")
+#			writer.writerows(wallet_list)
 
 		transaction_list = []
 		cursor.execute("select * from balance_transaction order by wallet_id_id asc")
@@ -81,9 +81,9 @@ if __name__ == "__main__" :
 		for transaction in cursor:
 			transaction_list.append(list(transaction))
 
-		with open("../file/transaction_list" + date + ".csv", "w", encoding="Shift_jis") as f:
-			writer = csv.writer(f, lineterminator="\n")
-			writer.writerows(transaction_list)
+#		with open("../file/transaction_list" + date + ".csv", "w", encoding="Shift_jis") as f:
+#			writer = csv.writer(f, lineterminator="\n")
+#			writer.writerows(transaction_list)
 
 		return_code = 0
 
