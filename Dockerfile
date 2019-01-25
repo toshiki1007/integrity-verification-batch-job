@@ -10,5 +10,5 @@ COPY /root /app
 RUN yum install -y unzip
 RUN curl -o daemon.zip https://s3.dualstack.us-east-2.amazonaws.com/aws-xray-assets.us-east-2/xray-daemon/aws-xray-daemon-linux-3.x.zip
 RUN unzip daemon.zip && cp xray /usr/bin/xray
-CMD  bash -c "/usr/bin/xray -b 0.0.0.0:2000 && cd /app/bin && python3 batch_job.py"
+CMD  bash -c "/usr/bin/xray -b 0.0.0.0:2000"
 EXPOSE 2000/udp
