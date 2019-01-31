@@ -110,11 +110,14 @@ if __name__ == "__main__" :
 				total_amount = 0
 				wallet_index += 1
 			else:
-				break
+				transaction_index += 1
 
-		logger.info("job end - program : " + prog_name + ", RC = " + str(return_code))
+		if(return_code != 0):
+			logger.warning("job abend - program : " + prog_name + ", RC = " + str(return_code))
+		else:
+			logger.info("job normal end - program : " + prog_name + ", RC = " + str(return_code))
+
 		xray_recorder.end_segment()
 	except Exception as e:
-		# キャッチして例外をログに記録
 		logger.exception(e)
 		sys.exit(1)

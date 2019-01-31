@@ -1,0 +1,49 @@
+2019-01-31 02:45:53,374 [    INFO] job start - program : batch_job
+2019-01-31 02:45:53,391 [    INFO] consistency success - wallet_id=1
+2019-01-31 02:45:53,392 [   ERROR] consistency error - wallet_id=2, master_balance=505550, total_amount=505500
+2019-01-31 02:45:53,392 [    INFO] job end - program : batch_job, RC = 8
+2019-01-31 02:47:19,402 [    INFO] job start - program : batch_job
+2019-01-31 02:47:19,406 [    INFO] consistency success - wallet_id=1
+2019-01-31 02:47:19,406 [   ERROR] consistency error - wallet_id=2, master_balance=50500, total_amount=505500
+2019-01-31 02:47:19,406 [    INFO] job end - program : batch_job, RC = 8
+2019-01-31 02:47:57,120 [    INFO] job start - program : batch_job
+2019-01-31 02:47:57,124 [    INFO] consistency success - wallet_id=1
+2019-01-31 02:47:57,124 [   ERROR] consistency error - wallet_id=2, master_balance=50500, total_amount=505500
+2019-01-31 02:47:57,125 [    INFO] job end - program : batch_job, RC = 8
+2019-01-31 02:48:11,671 [    INFO] job start - program : batch_job
+2019-01-31 02:48:11,676 [    INFO] consistency success - wallet_id=1
+2019-01-31 02:48:11,676 [   ERROR] consistency error - wallet_id=2, master_balance=505000, total_amount=505500
+2019-01-31 02:48:11,677 [    INFO] job end - program : batch_job, RC = 8
+2019-01-31 02:48:27,536 [    INFO] job start - program : batch_job
+2019-01-31 02:48:27,539 [    INFO] consistency success - wallet_id=1
+2019-01-31 02:48:27,539 [    INFO] consistency success - wallet_id=2
+2019-01-31 02:48:27,540 [    INFO] job end - program : batch_job, RC = 0
+2019-01-31 03:02:26,808 [    INFO] job start - program : batch_job
+2019-01-31 03:02:26,813 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:02:26,815 [    INFO] consistency success - wallet_id=2
+2019-01-31 03:02:26,816 [    INFO] job end - program : batch_job, RC = 0
+2019-01-31 03:04:54,412 [    INFO] job start - program : batch_job
+2019-01-31 03:04:54,417 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:04:54,420 [    INFO] consistency success - wallet_id=2
+2019-01-31 03:04:54,422 [    INFO] consistency success - wallet_id=4
+2019-01-31 03:04:54,422 [    INFO] job end - program : batch_job, RC = 0
+2019-01-31 03:05:25,321 [    INFO] job start - program : batch_job
+2019-01-31 03:05:25,325 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:05:25,325 [   ERROR] consistency error - wallet_id=2, master_balance=505550, total_amount=505500
+2019-01-31 03:05:25,326 [    INFO] consistency success - wallet_id=4
+2019-01-31 03:05:25,326 [    INFO] job end - program : batch_job, RC = 8
+2019-01-31 03:06:19,410 [    INFO] job start - program : batch_job
+2019-01-31 03:06:19,415 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:06:19,415 [   ERROR] consistency error - wallet_id=2, master_balance=505550, total_amount=505500
+2019-01-31 03:06:19,415 [    INFO] consistency success - wallet_id=4
+2019-01-31 03:06:19,416 [ WARNING] job end - program : batch_job, RC = 8
+2019-01-31 03:07:50,489 [    INFO] job start - program : batch_job
+2019-01-31 03:07:50,492 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:07:50,493 [   ERROR] consistency error - wallet_id=2, master_balance=505550, total_amount=505500
+2019-01-31 03:07:50,493 [    INFO] consistency success - wallet_id=4
+2019-01-31 03:07:50,493 [ WARNING] job end - program : batch_job, RC = 8
+2019-01-31 03:08:25,674 [    INFO] job start - program : batch_job
+2019-01-31 03:08:25,677 [    INFO] consistency success - wallet_id=1
+2019-01-31 03:08:25,678 [   ERROR] consistency error - wallet_id=2, master_balance=505550, total_amount=505500
+2019-01-31 03:08:25,678 [    INFO] consistency success - wallet_id=4
+2019-01-31 03:08:25,679 [ WARNING] job abend - program : batch_job, RC = 8
